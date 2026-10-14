@@ -1,0 +1,134 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f3f4f6;
+    font-family: Arial, sans-serif;
+    color: #1f2937;
+}
+
+.container {
+    width: 90%;
+    max-width: 650px;
+    margin: 50px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.todo-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.todo-form input[type="text"] {
+    flex: 1;
+    min-width: 180px;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.todo-form button[type="submit"] {
+    background: #2563eb;
+    color: white;
+}
+
+.cancel-btn {
+    background: #e5e7eb;
+    color: #111827;
+}
+
+.todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.todo-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    overflow-wrap: anywhere;
+}
+
+.todo-label input {
+    cursor: pointer;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #9ca3af;
+}
+
+.todo-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.edit-btn {
+    background: #f59e0b;
+    color: #111827;
+}
+
+.delete-btn {
+    background: #dc2626;
+    color: white;
+}
+
+.error {
+    color: #dc2626;
+    margin-bottom: 15px;
+}
+
+.empty {
+    text-align: center;
+    color: #6b7280;
+    padding: 20px 0;
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .todo-item {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
